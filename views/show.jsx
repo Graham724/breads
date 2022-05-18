@@ -14,7 +14,7 @@ function Show ({bread}) {
             ? <span> does</span>
             : <span> does NOT</span>
           }
-          have gluten.
+          <span>have gluten.</span>
         </p>
         <img src = {bread.image} alt = {bread.name} />
         <li><a href="/breads">Go Home</a></li>
