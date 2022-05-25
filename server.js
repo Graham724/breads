@@ -1,6 +1,8 @@
 // DEPENDENCIES
 const express = require('express')
 const methodOverride = require('method-override')
+const mongoose = require('mongoose')
+
 
 
 // CONFIGURATION
@@ -32,6 +34,11 @@ app.get('/', (req, res) => {
   app.get('*', (req, res) => {
     res.send('404')
   })
+
+  //db connection
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log('DB connected'))
+.catch(err => console.error(err));
   
 
 // LISTEN
