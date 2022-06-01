@@ -18,6 +18,7 @@ function Index ({ breads, title, bakers }) {
             })
         }
         </ul>
+        <h3>Breads</h3>
         <ul>
             {
                 breads.map( (bread) => {
